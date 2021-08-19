@@ -4,9 +4,12 @@ agent any
     stage ("scm checkout stage") {
       steps {
         git 'https://github.com/dstar55/docker-hello-world-spring-boot.git'
-      }
-        
+      }   
     }
-    
+    stage ("maven build") {
+      steps {
+      sh 'mvn clean install'
+      }
+    }
   }
 }
