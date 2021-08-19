@@ -1,1 +1,12 @@
-
+pipeline {
+agent any
+  stages {
+    stage ("scm checkout stage") {
+      steps {
+        git 'https://github.com/dstar55/docker-hello-world-spring-boot.git'
+      }
+        
+    }
+    
+  }
+}
